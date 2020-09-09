@@ -106,6 +106,7 @@ export class RichTextToolbarBlocksCdn implements OnDestroy {
       "https://cdn.dhtmlx.com/richtext/pro/edge/richtext.css",
     ]).then(() => {
       this.richtext = new dhx.Richtext(this.container.nativeElement);
+      this.richtext.setValue(initialValue, "html");
     });
   }
 
