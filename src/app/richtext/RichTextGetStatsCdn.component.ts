@@ -8,9 +8,9 @@ import fromCDN from "from-cdn";
       <section class="dhx_sample-controls">
         <button class="dhx_sample-btn dhx_sample-btn--flat" (click)="getStats()">Get Statistics</button>
       </section>
-      <div class="dhx-container_setting">
-        <div class="dhx_sample-container__widget setting" #richtext></div>
-        <div class="dhx_sample-container__sidebar setting">
+      <div class="dhx_container">
+        <div class="dhx_sample-container__widget" #richtext></div>
+        <div class="dhx_sample-container__sidebar">
           <ul>
             <li>
               Characters: <span>{{ charsAmount }}</span

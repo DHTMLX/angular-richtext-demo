@@ -10,7 +10,6 @@ body,
 #root {
   height: 100%;
 }
-
 .dhx-container {
   height: 100%;
 }
@@ -21,7 +20,7 @@ body,
 
 .dhx_sample-container__widget {
   width: 95%;
-  height: 600px;
+  height: 500px;
   margin: 20px auto;
 }
 
@@ -83,18 +82,23 @@ body,
 }
 
 /* for events */
-.dhx-events {
+
+.dhx_container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
   width: 95%;
   margin: 0 auto;
 }
 
 .dhx_sample-container__sidebar {
-  width: 20%;
+  width: 100%;
+  min-width: 250px;
   margin: 20px 0 0 20px;
   border: 1px solid #dfdfdf;
   padding: 10px;
-  height: 600px;
+  height: 500px;
   font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
   font-size: 14px;
   line-height: 1.3;
@@ -115,40 +119,29 @@ body,
 
 /* for setting HTML content */
 
-.dhx_sample-container__sidebar textarea {
-  width: 100%;
-  height: 100%;
-  border: none;
-  font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
-  font-size: 13px;
-  line-height: 1.3;
-}
-
-.dhx_sample-container__sidebar textarea:focus {
-  outline: none;
-  font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
-}
-
 .dhx-container_setting {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  height: 100%;
 }
 
-.dhx_sample-container__widget.setting {
-  width: 75%;
-  height: 600px;
-  margin-top: 0;
-}
-
-.dhx_sample-container__sidebar.setting {
-  width: 15%;
-  margin: 0 auto;
-  overflow-y: scroll;
-  padding-left: 10px;
-  padding-right: 10px;
+.dhx_sample-container__textarea {
+  margin: 20px 0 0 20px;
+  padding: 10px;
+  min-width: 250px;
+  width: 100%;
+  height: 500px;
+  border: 1px solid #e4e4e4;
+  font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
   font-size: 13px;
   line-height: 1.3;
+  resize: none;
+}
+
+.dhx_sample-container__textarea:focus {
+  outline: none;
+  font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
 }
 
 /* for text editor modes */
@@ -219,4 +212,12 @@ body,
 
 .dhx_checkbox__input:focus + * + .dhx_label {
   color: #0288d1;
+}
+
+.dhx_checkbox .dhx_label {
+  margin-top: 0 !important;
+}
+
+.dhx_form-group {
+  margin-right: 8px;
 }

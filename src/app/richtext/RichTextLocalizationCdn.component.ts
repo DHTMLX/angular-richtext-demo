@@ -77,14 +77,16 @@ const locale = {
   template: `
     <div class="dhx-container_inner">
       <section class="dhx_sample-controls">
-        <div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
-          <input checked name="locale" id="en" (change)="handleChange('en')" type="radio" class="dhx_sample-radio__input" />
-          <label for="en" class="dhx_sample-radio__label">English</label>
-        </div>
-        <div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
-          <input name="locale" id="de" (change)="handleChange('de')" type="radio" class="dhx_sample-radio__input" />
-          <label for="de" class="dhx_sample-radio__label">Deutsch</label>
-        </div>
+        <label class="dhx_form-group dhx_radiobutton dhx_form-group--inline dhx_form-group--no-message-holder dhx_sample-input__wrapper--pl-16">
+          <input type="radio" name="locale" class="dhx_radiobutton__input" (change)="handleChange('en')" checked />
+          <span class="dhx_radiobutton__visual-input"></span>
+          <span class="dhx_label">English</span>
+        </label>
+        <label class="dhx_form-group dhx_radiobutton dhx_form-group--inline dhx_form-group--no-message-holder dhx_sample-input__wrapper--pl-16">
+          <input type="radio" name="locale" class="dhx_radiobutton__input" (change)="handleChange('de')" />
+          <span class="dhx_radiobutton__visual-input"></span>
+          <span class="dhx_label">Deutsch</span>
+        </label>
       </section>
       <div class="dhx_sample-container__widget" #richtext></div>
     </div>

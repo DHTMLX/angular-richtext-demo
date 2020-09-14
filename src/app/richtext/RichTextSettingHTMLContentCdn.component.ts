@@ -1,5 +1,4 @@
 import { Output, Component, ViewChild, OnDestroy, ElementRef, EventEmitter, ViewEncapsulation } from "@angular/core";
-import { NgModel } from "@angular/forms";
 import fromCDN from "from-cdn";
 
 @Component({
@@ -9,11 +8,9 @@ import fromCDN from "from-cdn";
       <section class="dhx_sample-controls">
         <button class="dhx_sample-btn dhx_sample-btn--flat" (click)="handleSetValue(textarea.value)">Set HTML Value</button>
       </section>
-      <div class="dhx-container_setting">
-        <div class="dhx_sample-container__widget setting" #richtext></div>
-        <div class="dhx_sample-container__sidebar setting">
-          <textarea class="dhx_textarea" ref-textarea [(ngModel)]="textValue"></textarea>
-        </div>
+      <div class="dhx_container">
+        <div class="dhx_sample-container__widget" #richtext></div>
+        <textarea class="dhx_sample-container__textarea" ref-textarea [(ngModel)]="textValue"></textarea>
       </div>
     </div>
   `,

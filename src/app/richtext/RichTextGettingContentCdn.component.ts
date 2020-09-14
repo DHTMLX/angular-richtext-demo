@@ -14,11 +14,9 @@ const initialContent = `
         <button class="dhx_sample-btn dhx_sample-btn--flat" (click)="serialize('markdown')">Serialize Markdown</button>
         <button class="dhx_sample-btn dhx_sample-btn--flat" (click)="serialize('text')">Serialize Plain Text</button>
       </section>
-      <div class="dhx-container_setting">
-        <div class="dhx_sample-container__widget setting" #richtext></div>
-        <div class="dhx_sample-container__sidebar setting">
-          <textarea class="dhx_sample-textarea" placeholder="The result will be here:">{{ textareaValue }}</textarea>
-        </div>
+      <div class="dhx_container">
+        <div class="dhx_sample-container__widget" #richtext></div>
+        <textarea class="dhx_sample-container__textarea" placeholder="The result will be here:">{{ textareaValue }}</textarea>
       </div>
     </div>
   `,

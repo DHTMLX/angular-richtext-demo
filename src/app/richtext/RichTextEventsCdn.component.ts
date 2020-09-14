@@ -8,7 +8,7 @@ import fromCDN from "from-cdn";
       <section class="dhx_sample-controls">
         <button class="dhx_sample-btn dhx_sample-btn--flat" (click)="clearAll()">Clear events</button>
       </section>
-      <div class="dhx-events">
+      <div class="dhx_container">
         <div class="dhx_sample-container__widget" #richtext></div>
         <div class="dhx_sample-container__sidebar">
           <div class="events-list--element" *ngIf="this.isEmpty">No events yet</div>

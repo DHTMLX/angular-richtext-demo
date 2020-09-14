@@ -9,6 +9,8 @@ import { RichTextGetStatsCdn } from "../app/richtext/RichTextGetStatsCdn.compone
 import { moduleMetadata } from "@storybook/angular";
 import { CommonModule } from "@angular/common";
 
+import "../styles.css";
+
 export default {
   title: "Richtext",
   component: RichTextInitCdn,

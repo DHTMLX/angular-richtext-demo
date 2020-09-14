@@ -6,29 +6,16 @@ import fromCDN from "from-cdn";
   template: `
     <div class="dhx-container_inner">
       <section class="dhx_sample-controls">
-        <div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
-          <input
-            checked
-            name="mode"
-            value="classic"
-            id="classic"
-            (change)="handleChange('classic')"
-            type="radio"
-            class="dhx_sample-radio__input"
-          />
-          <label for="classic" class="dhx_sample-radio__label">Classic mode</label>
-        </div>
-        <div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
-          <input
-            name="mode"
-            value="document"
-            id="document"
-            (change)="handleChange('document')"
-            type="radio"
-            class="dhx_sample-radio__input"
-          />
-          <label for="document" class="dhx_sample-radio__label">Document mode</label>
-        </div>
+        <label class="dhx_form-group dhx_radiobutton dhx_form-group--inline dhx_form-group--no-message-holder dhx_sample-input__wrapper--pl-16">
+          <input type="radio" name="mode" class="dhx_radiobutton__input" (change)="handleChange('classic')" checked />
+          <span class="dhx_radiobutton__visual-input"></span>
+          <span class="dhx_label">Classic mode</span>
+        </label>
+        <label class="dhx_form-group dhx_radiobutton dhx_form-group--inline dhx_form-group--no-message-holder dhx_sample-input__wrapper--pl-16">
+          <input type="radio" name="mode" class="dhx_radiobutton__input" (change)="handleChange('document')" />
+          <span class="dhx_radiobutton__visual-input"></span>
+          <span class="dhx_label">Document mode</span>
+        </label>
       </section>
       <div class="dhx_sample-container__widget" #richtext></div>
     </div>
