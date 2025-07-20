@@ -7,26 +7,27 @@ import {
   OnInit,
   OnDestroy,
   ViewChild,
-  ViewEncapsulation,
+  ViewEncapsulation
 } from "@angular/core";
 
 @Component({
   encapsulation: ViewEncapsulation.None,
   selector: "richtext",
   styleUrls: ["./richtext.component.css"],
-  template: `<div #here class="widget"></div>`,
+  template: `<div class="component_container">
+    <div #richtext_container class="widget"></div>
+  </div>`
 })
 export class RichtextComponent implements OnInit, OnDestroy {
-  @ViewChild("here", { static: true }) container!: ElementRef;
+  @ViewChild("richtext_container", { static: true }) richtext_container!: ElementRef;
 
   private _richtext!: Richtext;
 
   ngOnInit() {
-    const initText = getData();
-    const richtext = new Richtext(this.container.nativeElement, {});
-    this._richtext = richtext;
-
-    richtext.setValue(initText, "markdown");
+    const { value } = getData();
+    this._richtext = new Richtext(this.richtext_container.nativeElement, {
+      value
+    });
   }
 
   ngOnDestroy(): void {

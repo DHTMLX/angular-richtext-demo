@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  template: `<richtext />`,
+  template: `<richtext />`
 })
 export class AppComponent {
   name = "";
