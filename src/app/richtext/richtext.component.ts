@@ -25,8 +25,13 @@ export class RichtextComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     const { value } = getData();
+    const baseURL = "https://master--richtext-go--dev.webix.io";
+    const imageUploadUrl = `${baseURL}/images`;
+
     this._richtext = new Richtext(this.richtext_container.nativeElement, {
-      value
+      value,
+      imageUploadUrl,
+      menubar: true
     });
   }
 
