@@ -1,5 +1,5 @@
 /* import RichText styles */
-@import "@dhx/trial-richtext/codebase/richtext.css";
+@import "@dhx/trial-richtext/dist/richtext.css";
 
 /* specify styles for initial page */
 html,
@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
 }
 
-/* specify styles for Kanban widget */
+/* specify styles for RichText widget */
 .widget {
   height: calc(100% - 56px);
 }

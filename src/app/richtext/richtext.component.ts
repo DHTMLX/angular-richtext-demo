@@ -18,14 +18,14 @@ import {
     <div #richtext_container class="widget"></div>
   </div>`
 })
-export class RichtextComponent implements OnInit, OnDestroy {
+export class RichTextComponent implements OnInit, OnDestroy {
   @ViewChild("richtext_container", { static: true }) richtext_container!: ElementRef;
 
   private _richtext!: Richtext;
 
   ngOnInit() {
     const { value } = getData();
-    const baseURL = "https://master--richtext-go--dev.webix.io";
+    const baseURL = "https://docs.dhtmlx.com/richtext-backend";
     const imageUploadUrl = `${baseURL}/images`;
 
     this._richtext = new Richtext(this.richtext_container.nativeElement, {
